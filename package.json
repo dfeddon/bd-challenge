@@ -1,0 +1,32 @@
+{
+  "name": "developer-challenge-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "*THE* developer challenge app...",
+  "main": "server.js",
+  "scripts": {
+    "test": "clear; NODE_ENV=test node_modules/.bin/nodemon --exec 'mocha --reporter spec'",
+    "dev": "clear; NODE_ENV=dev node_modules/.bin/nodemon ./src/node/server.js",
+    "start": "clear; NODE_ENV=prod gulp --tasks; NODE_ENV=prod node_modules/.bin/nodemon ./server/server.js"
+  },
+  "author": "Derek Feddon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -6,7 +6,7 @@ module.exports = (app) => {
 	// home route - serves angular application
 	app.get("/", (req, res) => {
 		// res.sendFile("app.html", { root: __dirname + "/public/html" });
-		let _path = "../../public/html";
+		let _path = "../public/html";
 		if (process.env.NODE_ENV !== 'prod')
 			_path = "../angular/html";
 		

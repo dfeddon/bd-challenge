@@ -15,6 +15,7 @@ function cleanServerCode(cb) {
 
 function copyAllButJSAngular(cb) {
     src(['src/angular/**/*.*', '!src/angular/**/*.js'])
+    // src('src/angular/**/*.*')
     .pipe(dest('public/'));
     cb();
 }

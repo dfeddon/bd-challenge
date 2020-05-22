@@ -6,8 +6,8 @@
   "main": "server.js",
   "scripts": {
     "test": "clear; NODE_ENV=test node_modules/.bin/nodemon --exec 'mocha --reporter spec'",
-    "dev": "clear; NODE_ENV=dev node_modules/.bin/nodemon ./src/node/server.js",
-    "start": "clear; NODE_ENV=prod gulp --tasks; NODE_ENV=prod node_modules/.bin/nodemon ./server/server.js"
+    "dev": "clear; NODE_ENV=dev pm2 start ./src/node/server.js",
+    "start": "clear; NODE_ENV=prod gulp; NODE_ENV=prod pm2 start ./server/server.js"
   },
   "author": "Derek Feddon",
   "license": "ISC",

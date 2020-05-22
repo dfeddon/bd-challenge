@@ -9,7 +9,7 @@ function ChallengeCtrl($http, $scope, $location, $window, $modal, $log) {
 	void 0;
 	cCtrl.welcomeMessage = "Tracking Numbers";
 
-		$http.get('./api/v1/records')
+		$http.get($location.absUrl() + 'api/v1/records')
 		.then( (response) => {
 			void 0;
 			$scope.records = response.data.records;
